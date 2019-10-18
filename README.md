@@ -49,9 +49,9 @@ To get details about how to declare Environment Variables visit  [`env-cmd`](htt
 
 1. Install Clients :
 
-        $ git clone https://github.com/notsonoobie/:git-app
+        $ git clone https://github.com/notsonoobie/task-manager-api.git
 
-        $ cd task-manager/
+        $ cd task-manager-api/
 
         $ npm install
 
