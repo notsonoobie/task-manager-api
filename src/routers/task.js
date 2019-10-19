@@ -9,7 +9,7 @@ router.post('/task', auth, async (req,res)=>{  // POST REQUEST ---> Creating Tas
     try{
         const task = new Task({ ...req.body, owner : req.user._id });
         await task.save();
-        res.send(task);
+        res.status(201).send(task);
     }catch(e){
         res.status(400).send(e);
     }
