@@ -2,7 +2,7 @@
 
 :notebook:  :memo:  :email:  :books:
 
-Task Manager API deployed on [Heroku]().
+Task Manager API deployed on [Heroku](https://task-manager-notsonoobie.herokuapp.com).
 ***
 ## Project Status :
 
@@ -109,7 +109,18 @@ The Post App need to be configured and Scipted for Automation of the workflow fo
 * Load Environment Variables for Dev into Postman APP : `../task-manager/Postman Collection/Task Manager API (dev).postman_environment.json`
 * Load Environment Variables for Prod into Postman APP : `../task-manager/Postman Collection/Task Manager API (Prod).postman_environment.json`
 
-You are good to go... :grimacing
+You are good to go... :grimacing:
+
+## **Project Architecture**
+
+<h1 align="center">
+	<br>
+	<br>
+	<img width="320" src="Project-Architecture/tm-api-architecture.jpg" alt="Architecture">
+	<br>
+	<br>
+	<br>
+</h1>
 
 ## **NOTE** :
 
