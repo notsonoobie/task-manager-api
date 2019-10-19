@@ -3,10 +3,17 @@
 :notebook:  :memo:  :email:  :books:
 
 Task Manager API deployed on [Heroku](https://task-manager-notsonoobie.herokuapp.com).
+
+For API Access follow Documentation and Switch on to Postman via `https://task-manager-notsonoobie.herokuapp.com`
+
 ***
 ## Project Status :
 
 __`COMPLETE`__ :fire: 
+
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
+
+
 
 ## Environments Required :
 * [Nodejs](https://nodejs.org/en/download/)
@@ -36,11 +43,14 @@ __`COMPLETE`__ :fire:
 ## Developer Dependencies :
 * `env-cmd` [:link:](https://www.npmjs.com/package/env-cmd)
 * `nodemon` [:link:](https://www.npmjs.com/package/nodemon)
+* `jest` [:link:](https://www.npmjs.com/package/jest)
+* `supertest` [:link:](https://www.npmjs.com/package/supertest)
 
 ## Environment Variables : 
 
 1. Create `config` Directory inside `task-manager`
 2. Create `dev.env` File inside `../task-manager/config/`
+2. Create `test.env` File inside `../task-manager/config`
 3. Define `PORT` (For Running Applications) , `SEND_GRID_API_KEY` (API Key for Sending Authenticated Emails) , `MONGO_DB_URL` (For Connection to MongoDB Database) , `JWT_SECRET_KEY` (For Verification of JWT Token)
 
 To get details about how to declare Environment Variables visit  [`env-cmd`](https://www.npmjs.com/package/env-cmd) Documentation. I have not provided my own `.env` configuration file for security concerns, so refer to the documentation.
@@ -63,6 +73,10 @@ To get details about how to declare Environment Variables visit  [`env-cmd`](htt
     * Start Client (Dev Mode) :
 
           env-cmd ./config/dev.env nodemon src/index.js
+    
+    * Test (Jest Integration) :
+          
+          env-cmd ./config/test.env jest --watch --runInBand
 
 3. Start Client : 
    * Start Client (Prod Mode) :
@@ -72,12 +86,14 @@ To get details about how to declare Environment Variables visit  [`env-cmd`](htt
     * Start Client (Dev Mode) :
 
           $ npm run dev
- 
+4. Testing Client with JEST :
+
+          $ npm test
 
 ***
 ## *Project Description* :
 
-This is a `Node.js` based Task Manager API supports JWT Authentication and Login System with Email Support. This app uses JWT Tokens for Authentication of User for Modifying `Profile` (User) / `Task` Data. The data is stored in MongoDB Database. User Can upload Profile Avatar using `multer` module support to the API which is then modified by `sharp` module and then stored in Database as Buffer. The task data can be viewed using endpoint which also offers `Filtering` , `Sorting` , &amp; `Pagination` of the Task Data. For every access/modification request User has to get Authenticated with Valid JWT verified Token. The entire architecture is based on `REST-API` which supports : 
+This is a `Node.js` based Task Manager API supports JWT Authentication and Login System with Email Support. This app uses JWT Tokens for Authentication of User for Modifying `Profile` (User) / `Task` Data. The data is stored in MongoDB Database. User Can upload Profile Avatar using `multer` module support to the API which is then modified by `sharp` module and then stored in Database as Buffer. The task data can be viewed using endpoint which also offers `Filtering` , `Sorting` , &amp; `Pagination` of the Task Data. For every access/modification request User has to get Authenticated with Valid JWT verified Token. The project is also tested with `JEST` Framework for Automated Testing of API Endpoints. The entire architecture is based on `REST-API` which supports : 
 
 * POST REQ - CREATING USER `{{url}}/users`
 * POST REQ - LOGGING-IN USER `{{url}}/users/login`
@@ -117,6 +133,17 @@ You are good to go... :grimacing:
 	<br>
 	<br>
 	<img width="320" src="Project-Architecture/tm-api-architecture.jpg" alt="Architecture">
+	<br>
+	<br>
+	<br>
+</h1>
+
+## **Testing with Jest Framework**
+
+<h1 align="center">
+	<br>
+	<br>
+	<img width="320" src="Project-Architecture/jest_test.JPG" alt="Jest">
 	<br>
 	<br>
 	<br>
